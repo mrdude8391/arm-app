@@ -1,0 +1,22 @@
+<div *ngIf="device">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>BLE Connection</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div>name: {{ device.name }}</div>
+      <div>id: {{ device.id }}</div>
+      <div>advertising: {{ device.adData }}</div>
+      <div>rssi: {{ device.rssi }}</div>
+      <div>services: {{ device.services }} </div>
+      <div>
+        <ul>
+          <li *ngFor="let characteristic of device.characteristics">
+            <div>characteristic: {{ characteristic.characteristic }}</div>
+          </li>
+        </ul>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+</div>

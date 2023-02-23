@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bluetooth
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Bluetooth</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <app-connection-status [device]="bleService.currentDevice"></app-connection-status>
+
+  <div name="scanButton" class="center" >
+    <ion-button  (click)="scan()">Scan for Devices</ion-button> 
+  </div>
+  <div name="advData">{{ bleService.charData }}</div>
+  <div name="clearButton" class="center" >
+    <ion-button  (click)="clear()">Clear Devices</ion-button> 
+  </div>
+  <ion-list *ngFor='let device of bleService.devices' >
+    <ion-item button (click)="connect(device)" >
+      <ion-label >
+        <h1>
+          {{ device.name }}
+        </h1>
+        <p>
+          {{ device.id }}
+        </p>
+        <p>
+          {{ device.rssi }}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
