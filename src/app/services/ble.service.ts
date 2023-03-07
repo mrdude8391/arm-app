@@ -87,6 +87,8 @@ export class BleService {
     this.getData(device);
   }
 
+  //bruh
+
   onDisconnected(device: BleDevice){
     console.log("Disconnected from" + device.name);
     this.ngZone.run(() => {
