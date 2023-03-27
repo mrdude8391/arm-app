@@ -4,6 +4,7 @@ This is the ionic application for my capstone project. 3D printed sensor enhance
 
 ```[tasklist]
 ### My tasks
-- [ ] https://github.com/octo-org/octo-repo/issues/45
-- [ ] Draft issue title
+- [ ] Clear services and characteristics on disconnect
+- [ ] Add pictures for contraction and no contraction
+- [ ] Receive contraction state from BLE 
 ```
