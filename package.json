@@ -30,6 +30,7 @@
     "@ionic-native/core": "^5.36.0",
     "@ionic/angular": "^6.1.9",
     "cordova-plugin-ble-central": "^1.6.2",
+    "firebase": "^9.18.0",
     "ionicons": "^6.0.3",
     "rxjs": "^6.6.7",
     "tslib": "^2.3.0",

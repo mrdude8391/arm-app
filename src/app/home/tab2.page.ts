@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, NgZone } from '@angular/core';
 import { BleService } from '../services/ble.service';
 import { BleDevice } from './../services/bleDevice';
@@ -20,8 +21,14 @@ export class Tab2Page {
     characteristics: [],
   }
 
-  constructor(private ngZone: NgZone, public bleService: BleService) {}
-
+  constructor(private ngZone: NgZone, public bleService: BleService, private dataService: DataService) {
+    this.dataService.getNumbers().subscribe(
+      res => {
+        console.log(res)
+      }
+    );
+  }
+    
   ngOnInit(): void {
     
   }
